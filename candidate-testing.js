@@ -16,9 +16,7 @@ function askForName() {
   // TODO 1.1b: Ask for candidate's name //
 const input = require('readline-sync');
 let firstName = input.question("Enter your first name: ");
-
 let lastName = input.question("Enter your last name: ");
-
 candidateName = (firstName + " " + lastName);
 console.log(candidateName);
 }
