@@ -14,7 +14,7 @@ let space = " ";
 function askForName() {
   // TODO 1.1b: Ask for candidate's name //
 const input = require('readline-sync');
- candidateName = input.question("Enter your name: " );
+ candidateName = input.question("Please enter your name: " );
 
 console.log("Hello," + space + candidateName +"!");
 }
