@@ -24,7 +24,7 @@ function askQuestion() {
 const input = require('readline-sync');
 question = input.question("Who was the first American woman in space? ")
 candidateAnswer = question;
-
+correctAnswer = "Sally Ride"
 }
 
 function gradeQuiz(candidateAnswers) {
