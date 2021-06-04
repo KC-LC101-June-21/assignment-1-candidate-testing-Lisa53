@@ -21,7 +21,9 @@ console.log("Hello," + space + candidateName +"!");
 
 function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
-
+const input = require('readline-sync');
+question = input.question("Who was the first American woman in space? ")
+candidateAnswer = question;
 
 }
 
