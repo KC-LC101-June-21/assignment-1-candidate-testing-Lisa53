@@ -6,8 +6,8 @@ let candidateName = "";
 let question = "Who was the first American woman in space? ";
 let correctAnswer = "Sally Ride";
 let candidateAnswer = "";
-let questions;
-let correctAnswers;
+let questions = "";
+let correctAnswers = "";
 let candidateAnswers;
 let space = " ";
 
@@ -22,9 +22,7 @@ console.log("Hello," + space + candidateName +"!");
 function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
 const input = require('readline-sync');
-question = input.question(question)
-candidateAnswer = question;
-
+candidateAnswer = input.question(question)
 }
 
 function gradeQuiz(candidateAnswers) {
@@ -36,9 +34,14 @@ if (candidateAnswer === correctAnswer) {
   console.log("Incorrect");
 }
 
-  let grade = "";
-  
+  let grade = correctAnswer / questions
 
+  if (candidateAnswer === correctAnswer) {
+    grade = 100
+    } else {
+      grade = 0  
+    }
+    console.log('Grade: '+ grade + '%');
   return grade;
 }
 
