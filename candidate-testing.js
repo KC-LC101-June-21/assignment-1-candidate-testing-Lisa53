@@ -34,7 +34,7 @@ if (candidateAnswer === correctAnswer) {
   console.log("Incorrect");
 }
 
-  let grade = correctAnswer / questions
+  let grade = "";
 
   if (candidateAnswer === correctAnswer) {
     grade = 100
@@ -42,7 +42,7 @@ if (candidateAnswer === correctAnswer) {
       grade = 0  
     }
     console.log('Grade: '+ grade + '%');
-  return grade;
+  return 
 }
 
 function runProgram() {
