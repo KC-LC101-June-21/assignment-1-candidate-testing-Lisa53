@@ -21,8 +21,15 @@ console.log("Hello," + space + candidateName +"!");
 
 function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
-const input = require('readline-sync');
-candidateAnswer = input.question(question)
+questions = ['Who was the first American woman in space? ', 'True or false: 5 kilometer == 5000 meters? ', '(5 + 3)/2 * 10 = ? ', "Given the array [8, 'Orbit', 'Trajectory', 45], what is at index 2? ", 'What is the minimum crew size for ? ' ];
+  correctAnswers = ['Sally Ride', 'true', '40', 'Trajectory', '3'];
+
+for(let i = 0; i < questions.length; i++) {
+    const input = require('readline-sync');
+    let candidateAnswers = input.question(questions[i]);
+    candidateAnswers += i
+    console.log(i)
+  }
 }
 
 function gradeQuiz(candidateAnswers) {
