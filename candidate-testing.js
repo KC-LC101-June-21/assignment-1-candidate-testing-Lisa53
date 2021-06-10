@@ -27,27 +27,18 @@ correctAnswers = ['Sally Ride', 'true', '40', 'Trajectory', '3'];
 for(let i = 0; i < questions.length; i++) {
     const input = require('readline-sync');
     let answers = input.question(questions[i]);
-  candidateAnswers.push(answers[i]);
+  candidateAnswers.push(answers);
+console.log(`Your answer: ${candidateAnswers[i]}\nCorrect answer: ${correctAnswers[i]}`);
+  
 }
 
 }
 function gradeQuiz(candidateAnswers) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
-if (candidateAnswers === correctAnswers) {
-  console.log('Correct!');
-} else {
-  console.log("Incorrect");
-}
 
-  let grade = "";
 
-  if (candidateAnswer === correctAnswer) {
-    grade = 100
-    } else {
-      grade = 0  
-    }
-    console.log('Grade: '+ grade + '%');
+
   return 
 }
 
