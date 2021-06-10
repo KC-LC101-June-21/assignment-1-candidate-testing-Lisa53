@@ -6,7 +6,7 @@ let candidateName = "";
 let question = "Who was the first American woman in space? ";
 let correctAnswer = "Sally Ride";
 let candidateAnswer = "";
-let questions = "";
+let questions = [];
 let correctAnswers = "";
 let candidateAnswers = [];
 let space = " ";
@@ -28,15 +28,17 @@ for(let i = 0; i < questions.length; i++) {
     const input = require('readline-sync');
     let answers = input.question(questions[i]);
   candidateAnswers.push(answers);
-console.log(`Your answer: ${candidateAnswers[i]}\nCorrect answer: ${correctAnswers[i]}`);
-  
 }
+  console.log("");
 
 }
 function gradeQuiz(candidateAnswers) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
-
+for(let i = 0; i < questions.length; i++) {
+console.log(`${questions[i]}\nYour answer: ${candidateAnswers[i]}\nCorrect answer: ${correctAnswers[i]}`);
+  console.log("");
+}
 
 
   return 
