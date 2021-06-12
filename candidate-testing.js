@@ -37,7 +37,7 @@ console.log(`>> QUIZ RESULTS <<\n`);
 console.log(`Candidate Name: ${candidateName}\n`);
 
 for(let i = 0; i < questions.length; i++) {
-console.log(`${1+i})${questions[i]}`);
+console.log(`${1+i}) ${questions[i]}`);
 console.log(`Your answer: ${candidateAnswers[i]}`);
 console.log(`Correct answer: ${correctAnswers[i]}`);
 
