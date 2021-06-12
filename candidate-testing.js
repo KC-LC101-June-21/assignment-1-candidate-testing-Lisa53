@@ -1,3 +1,4 @@
+const input = require('readline-sync');
 // TODO 2: modify your quiz app to ask 5 questions //
 
 // TODO 1.1a: Define candidateName // 
@@ -13,7 +14,6 @@ let space = " ";
 
 function askForName() {
   // TODO 1.1b: Ask for candidate's name //
-const input = require('readline-sync');
  candidateName = input.question("Please enter your name: " );
 
 console.log(`Hello, ${candidateName}!`);
@@ -23,7 +23,6 @@ function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
 
 for(let i = 0; i < questions.length; i++) {
-    const input = require('readline-sync');
     let answers = input.question(questions[i]);
   candidateAnswers.push(answers);
 }
@@ -37,12 +36,9 @@ console.log(`>> QUIZ RESULTS <<\n`);
 console.log(`Candidate Name: ${candidateName}\n`);
 
 for(let i = 0; i < questions.length; i++) {
-console.log(`${1+i}) ${questions[i]}`);
-console.log(`Your answer: ${candidateAnswers[i]}`);
-console.log(`Correct answer: ${correctAnswers[i]}`);
+console.log(`${1+i}) ${questions[i]}\nYour answer: ${candidateAnswers[i]}\nCorrect answer: ${correctAnswers[i]}`);
 
-
-  console.log("");
+console.log("");
 }
 // let grades = "";
 // let correctAnswersStr = correctAnswers.join(',').toLowerCase
