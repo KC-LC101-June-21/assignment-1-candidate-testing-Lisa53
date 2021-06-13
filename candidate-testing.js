@@ -10,7 +10,8 @@ let candidateAnswer = "";
 let questions = ['Who was the first American woman in space? ', 'True or false: 5 kilometer == 5000 meters? ', '(5 + 3)/2 * 10 = ? ', "Given the array [8, 'Orbit', 'Trajectory', 45], what is at index 2? ", 'What is the minimum crew size for ? ' ];
 let correctAnswers = ['Sally Ride', 'true', '40', 'Trajectory', '3'];
 let candidateAnswers = [];
-let space = " ";
+let correctAnswersStr = correctAnswers.join(',').toLowerCase
+let candidateAnswersStr = candidateAnswers.join(',').toLowerCase
 
 function askForName() {
   // TODO 1.1b: Ask for candidate's name //
@@ -39,6 +40,12 @@ console.log(`${1+i}) ${questions[i]}\nYour answer: ${candidateAnswers[i]}\nCorre
 
 console.log("");
 }
+console.log(candidateAnswers);
+//let numberOfCorrectAnswers = 
+
+
+
+
 // let grades = "";
 // let correctAnswersStr = correctAnswers.join(',').toLowerCase
 // let candidateAnswersStr = candidateAnswers.join(',').toLowerCase
@@ -46,7 +53,7 @@ console.log("");
 // console.log(grades)
 // for (let i = 0; i < correctAnswers.length; i++) {
 //   if (candidateAnswersStr[i] === correctAnswersStr[i]){
-//   grades.push(100)
+//   grades.push(1)
 // } else  {
 //   (candidateAnswersStr[i] !== correctAnswersStr[i])
 //   grades.push(0)
