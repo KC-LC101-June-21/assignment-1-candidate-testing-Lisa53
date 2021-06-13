@@ -10,8 +10,7 @@ let candidateAnswer = "";
 let questions = ['Who was the first American woman in space? ', 'True or false: 5 kilometer == 5000 meters? ', '(5 + 3)/2 * 10 = ? ', "Given the array [8, 'Orbit', 'Trajectory', 45], what is at index 2? ", 'What is the minimum crew size for ? ' ];
 let correctAnswers = ['Sally Ride', 'true', '40', 'Trajectory', '3'];
 let candidateAnswers = [];
-let correctAnswersStr = correctAnswers.join(',').toLowerCase
-let candidateAnswersStr = candidateAnswers.join(',').toLowerCase
+
 
 function askForName() {
   // TODO 1.1b: Ask for candidate's name //
@@ -40,30 +39,25 @@ console.log(`${1+i}) ${questions[i]}\nYour answer: ${candidateAnswers[i]}\nCorre
 
 console.log("");
 }
-console.log(candidateAnswers);
-//let numberOfCorrectAnswers = 
 
+let numberOfCorrectAnswers = 0;
 
+for (i =0; i < correctAnswers.length; i++) {
+  if (candidateAnswers[i].toLowerCase() === correctAnswers[i].toLowerCase()) {
+    numberOfCorrectAnswers++;
+ }
+}
+let candidatePercentage = (numberOfCorrectAnswers / 5) * 100
 
+let status = ""
+if (candidatePercentage >= 80){
+  status = "PASSED"
+} else {
+  status = "FAILED"
+}
 
-// let grades = "";
-// let correctAnswersStr = correctAnswers.join(',').toLowerCase
-// let candidateAnswersStr = candidateAnswers.join(',').toLowerCase
-// grades = candidateAnswersStr === correctAnswersStr
-// console.log(grades)
-// for (let i = 0; i < correctAnswers.length; i++) {
-//   if (candidateAnswersStr[i] === correctAnswersStr[i]){
-//   grades.push(1)
-// } else  {
-//   (candidateAnswersStr[i] !== correctAnswersStr[i])
-//   grades.push(0)
-// }
-// console.log(grades);
-//let percentageGrade = (grades / 5)
-
-
-
-
+console.log(`>>> Overall Grade: ${candidatePercentage}% (${numberOfCorrectAnswers} out of 5 correct) <<<`);
+console.log(`>>> Status: ${status} <<<`);
 
 
   return grade;
