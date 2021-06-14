@@ -49,15 +49,15 @@ for (i =0; i < correctAnswers.length; i++) {
 }
 let candidatePercentage = (numberOfCorrectAnswers / 5) * 100
 
-let status = ""
+let quizStatus = ""
 if (candidatePercentage >= 80){
-  status = "PASSED"
+  quizStatus = "PASSED"
 } else {
-  status = "FAILED"
+  quizStatus = "FAILED"
 }
 
 console.log(`>>> Overall Grade: ${candidatePercentage}% (${numberOfCorrectAnswers} out of 5 correct) <<<`);
-console.log(`>>> Status: ${status} <<<`);
+console.log(`>>> Status: ${quizStatus} <<<`);
 
 
   return grade;
