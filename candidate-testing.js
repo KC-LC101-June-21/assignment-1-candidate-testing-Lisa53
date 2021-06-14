@@ -7,7 +7,7 @@ let candidateName = "";
 let question = "Who was the first American woman in space? ";
 let correctAnswer = "Sally Ride";
 let candidateAnswer = "";
-let questions = ['Who was the first American woman in space? ', 'True or false: 5 kilometer == 5000 meters? ', '(5 + 3)/2 * 10 = ? ', "Given the array [8, 'Orbit', 'Trajectory', 45], what is at index 2? ", 'What is the minimum crew size for ? ' ];
+let questions = ['Who was the first American woman in space? ', 'True or false: 5 kilometer == 5000 meters? ', '(5 + 3)/2 * 10 = ? ', "Given the array [8, 'Orbit', 'Trajectory', 45], what is at index 2? ", 'What is the minimum crew size for the ISS? ' ];
 let correctAnswers = ['Sally Ride', 'true', '40', 'Trajectory', '3'];
 let candidateAnswers = [];
 
@@ -47,16 +47,16 @@ for (i =0; i < correctAnswers.length; i++) {
     numberOfCorrectAnswers++;
  }
 }
-let candidatePercentage = (numberOfCorrectAnswers / 5) * 100
+grade = (numberOfCorrectAnswers / 5) * 100
 
 let quizStatus = ""
-if (candidatePercentage >= 80){
+if (grade >= 80){
   quizStatus = "PASSED"
 } else {
   quizStatus = "FAILED"
 }
 
-console.log(`>>> Overall Grade: ${candidatePercentage}% (${numberOfCorrectAnswers} out of 5 correct) <<<`);
+console.log(`>>> Overall Grade: ${grade}% (${numberOfCorrectAnswers} out of 5 correct) <<<`);
 console.log(`>>> Status: ${quizStatus} <<<`);
 
 
